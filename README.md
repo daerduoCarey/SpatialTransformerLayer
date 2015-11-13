@@ -17,7 +17,7 @@ The code contains both implementation for Spatial Transformer Layer (named with 
 * My layer only support affine transformation with six parameters received from the above layer as follows.
 	
         T = [	\theta_11 \theta_12 \theta_13;
-			\theta_21 \theta_22 \theta_23
+				\theta_21 \theta_22 \theta_23
 		]
 	
 * It is not necessary that the above layer generates exactly six parameters. If it generates two (e.g. `\theta\_13` and `\theta\_23`, this is the case for only allowing translation to happen), you can indicate other four parameters in parameters for this Spatial Transformer Layer as follows.
