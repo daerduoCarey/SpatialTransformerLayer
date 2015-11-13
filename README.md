@@ -6,7 +6,7 @@ The code contains both implementation for Spatial Transformer Layer (named with 
 
 ## Organization of the Code
 
-* **src/caffe/layers:** contains the GPU implementation (`.cpp` and `.cu` file) for Spatial Transformer Layer.
+* **src/caffe/layers:** contains the GPU implementation (`.cpp` and `.cu` file) for Spatial Transformer Layer. Notice that CPU version is not refined and it will be mush faster to use GPU version. Since I did not test on CPU version too much, it may not even correct.
 * **src/caffe/proto:** contains my proto definition for Spatial Transformer Layer (Search for 'SpatialTransformerParameter').
 * **src/caffe/test:** containts a test file for Spatial Transformer Layer.
 * **include:** contains the `.hpp` file for the layer.
@@ -16,9 +16,9 @@ The code contains both implementation for Spatial Transformer Layer (named with 
 
 * My layer only support affine transformation with six parameters received from the above layer as follows.
 	
-        T = [	\theta_11 \theta_12 \theta_13; 
-        	\theta_21 \theta_22 \theta_23 
-        ]
+        T = [	\theta_11 \theta_12 \theta_13;
+		\theta_21 \theta_22 \theta_23
+		]
 	
 * It is not necessary that the above layer generates exactly six parameters. If it generates two (e.g. `\theta\_13` and `\theta\_23`, this is the case for only allowing translation to happen), you can indicate other four parameters in parameters for this Spatial Transformer Layer as follows.
 	
