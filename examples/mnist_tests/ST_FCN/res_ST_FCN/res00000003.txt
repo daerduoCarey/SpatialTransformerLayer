@@ -1,1 +1,0 @@
-Digit at (8, 1) should be 3, but is classified as 7

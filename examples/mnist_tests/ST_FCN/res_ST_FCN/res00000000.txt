@@ -1,4 +1,0 @@
-Digit at (0, 8) should be 5, but is classified as 8
-Digit at (1, 8) should be 3, but is classified as 8
-Digit at (3, 3) should be 4, but is classified as 6
-Digit at (4, 3) should be 2, but is classified as 4

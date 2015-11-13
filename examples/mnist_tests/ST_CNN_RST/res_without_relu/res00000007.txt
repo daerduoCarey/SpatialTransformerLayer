@@ -1,3 +1,0 @@
-Digit at (1, 7) should be 0, but is classified as 7
-Digit at (8, 6) should be 6, but is classified as 0
-Digit at (9, 7) should be 5, but is classified as 1
