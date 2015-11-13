@@ -1,0 +1,15 @@
+net: "models/CUB_googLeNet_ST/train_val.prototxt"
+test_iter: 180
+test_interval: 200
+test_initialization: false
+display: 10
+average_loss: 10
+base_lr: 0.001
+lr_policy: "exp"
+gamma: 0.999993
+max_iter: 1000000
+momentum: 0.9
+weight_decay: 0.0002
+snapshot: 1000
+snapshot_prefix: "models/CUB_googLeNet_ST/caffemodels/CUB_googLeNet_ST_xy"
+solver_mode: GPU

@@ -1,0 +1,3 @@
+Digit at (7, 0) should be 6, but is classified as 5
+Digit at (8, 2) should be 9, but is classified as 4
+Digit at (8, 3) should be 3, but is classified as 7

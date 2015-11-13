@@ -1,0 +1,2 @@
+Digit at (5, 1) should be 7, but is classified as 2
+Digit at (8, 2) should be 8, but is classified as 2
