@@ -45,7 +45,7 @@ The code contains both implementation for Spatial Transformer Layer (named with 
 
 ## Acknowledges
 
-This is the job done while I had internship at Cornell in Graphics and Vision Group, under supervision of Prof. Kavita Bala. I would like to thank great help from Kavita and her Ph.D. students Balazs Kovacs, Kevin Matzen and Sean Bell. 
+This is the job done while I had internship at Cornell in Graphics and Vision Group, advised by Prof. Kavita Bala. I would like to thank great help from Kavita and her Ph.D. students Balazs Kovacs, Kevin Matzen and Sean Bell. 
 
 ## Contact
 
