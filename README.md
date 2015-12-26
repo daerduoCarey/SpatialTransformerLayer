@@ -43,6 +43,13 @@ The code contains both implementation for Spatial Transformer Layer (named with 
 * It is usually the case that Spatial Transformer Layer will be applied directly on input images to the networks. If this is the case, there is no need to backpropogate the loss to image pixels. One can set `to_compute_dU: false` in order to disable this useless backpropogation. The default value is `True`.
 * One may find it extremely useful to refer to caffe.proto to see my definition for layer parameters of Spatial Transformer Layer.
 
+## Other Helper Layers or Utils
+
+* FileFiller can be found in ./include/caffe/file\_filler.hpp. It can read initial filler values for parameters from files.
+* Loc\_Loss\_Layer can be found in ./src/caffe/layers and ./include/caffe/. It is designed by me when I experimented on CUB dataset and struggled with the problem that the transformations are so severe that the current focus is outside the region of the pixel space. If this is the case, there is no way that the focus can come back since there is no loss for it. This layer directly force parts of thetas to be small. Note that this layer works in the way that it will force any input values to be smaller than a threshold, so it will only force the parts of thetas that are computed from the bottom layer.
+* ST\_Loss\_Layer can be found in ./src/caffe/layers and ./include/caffe/. Similar to Loc\_Loss\_Layer, it is also designed for forcing the focus of ST layer to be inside the pixel space. The only difference is that it forces the transformed grids instead of the theta values. 
+* Power\_File\_Layer can be found in ./src/caffe/layers and ./include/caffe/. It works in the similar way as Caffe Power\_Layer. The only difference is that the shift values can be different for each values in the data blob. Since I only need shift functionality in my project, there is no implementation for scale and power functionalities. These two are easy to implement if one needs it.
+
 ## Acknowledges
 
 This is the job done while I had internship at Cornell in Graphics and Vision Group, advised by Prof. Kavita Bala. I would like to thank great help from Kavita and her Ph.D. students Balazs Kovacs, Kevin Matzen and Sean Bell. 
@@ -50,3 +57,4 @@ This is the job done while I had internship at Cornell in Graphics and Vision Gr
 ## Contact
 
 Webpage: http://www.kaichun-mo.com
+E-mail: daerduomkch@sjtu.edu.cn

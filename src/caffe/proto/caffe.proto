@@ -320,13 +320,6 @@ message LocLossParameter {
 	required double threshold = 1;
 }
 
-// added by Kaichun Mo
-message MaskTransformerParameter {
-	
-	// If false, only compute dmm, DO NOT compute dU
-	optional bool to_compute_dU = 1 [default = true];
-}
-
 // Specifies training parameters (multipliers on global learning constants,
 // and the name and other settings used for weight sharing).
 message ParamSpec {
@@ -442,7 +435,6 @@ message LayerParameter {
 
   // added by Kaichun Mo
   optional SpatialTransformerParameter st_param = 139;
-  optional MaskTransformerParameter mask_param = 140;
   optional STLossParameter st_loss_param = 141;
   optional PowerFileParameter power_file_param = 142;
   optional LocLossParameter loc_loss_param = 143;
