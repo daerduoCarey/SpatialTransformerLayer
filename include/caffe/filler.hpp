@@ -6,10 +6,8 @@
 #define CAFFE_FILLER_HPP
 
 #include <string>
-#include <fstream>
 
 #include "caffe/blob.hpp"
-#include "caffe/common.hpp"
 #include "caffe/proto/caffe.pb.h"
 #include "caffe/syncedmem.hpp"
 #include "caffe/util/math_functions.hpp"
@@ -308,11 +306,11 @@ Filler<Dtype>* GetFiller(const FillerParameter& param) {
     return new XavierFiller<Dtype>(param);
   } else if (type == "msra") {
     return new MSRAFiller<Dtype>(param);
-  } else if (type == "file") {
-	return new FileFiller<Dtype>(param);
   } else if (type == "bilinear") {
     return new BilinearFiller<Dtype>(param);
-  } else {
+  } else if (type == "file") {
+    return new FileFiller<Dtype>(param);
+  }else {
     CHECK(false) << "Unknown filler name: " << param.type();
   }
   return (Filler<Dtype>*)(NULL);

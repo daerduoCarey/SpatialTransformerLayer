@@ -3,7 +3,7 @@
 #include "caffe/layer.hpp"
 #include "caffe/util/math_functions.hpp"
 #include "caffe/util/gpu_util.cuh"
-#include "caffe/st_layer.hpp"
+#include "caffe/layers/st_layer.hpp"
 #include "caffe/util/benchmark.hpp"
 
 namespace caffe {
