@@ -5,9 +5,9 @@
 
 #include "caffe/blob.hpp"
 #include "caffe/common.hpp"
-#include "caffe/st_layer.hpp"
+#include "caffe/layers/st_layer.hpp"
 #include "caffe/filler.hpp"
-#include "caffe/vision_layers.hpp"
+//#include "caffe/vision_layers.hpp"
 
 #include "caffe/test/test_caffe_main.hpp"
 #include "caffe/test/test_gradient_check_util.hpp"
@@ -50,7 +50,7 @@ class HardSpatialTransformerLayerTest : public MultiDeviceTest<TypeParam> {
   vector<Blob<Dtype>*> blob_top_vec_;
 };
 
-TYPED_TEST_CASE(HardSpatialTransformerLayerTest, TestGPUAndDouble);
+TYPED_TEST_CASE(HardSpatialTransformerLayerTest, TestDtypesAndDevices);
 
 TYPED_TEST(HardSpatialTransformerLayerTest, TestGradient) {
   typedef typename TypeParam::Dtype Dtype;
