@@ -56,6 +56,6 @@ This is the job done while I had internship at Cornell in Graphics and Vision Gr
 
 ## Contact
 
-Webpage: http://www.kaichun-mo.com 
+Webpage: http://www.cs.stanford.edu/~kaichun/ 
 
-E-mail: daerduomkch@sjtu.edu.cn
+E-mail: kaichun [at] cs.stanford.edu
